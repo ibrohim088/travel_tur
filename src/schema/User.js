@@ -48,7 +48,9 @@ const UserSchema = new mongoose.Schema({
       hotels: { type: Boolean, default: false },
       bookings: { type: Boolean, default: false },
     }
-  }
+  },
+
+  userPhoto: []
 }, {
   versionKey: false,
   timestamps: {

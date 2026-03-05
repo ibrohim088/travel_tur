@@ -4,6 +4,8 @@ import config from './src/shared/config.js'
 import db from './src/db/index.js'
 import userRouter from './src/routes/user.js'
 import hotelRouter from './src/routes/hotel.js'
+import cityRouter from './src/routes/city.js'
+import countryRouter from './src/routes/country.js'
 
 const app = express()
 
@@ -13,7 +15,8 @@ app.use(express.json())
 
 app.use('/users', userRouter)
 app.use('/hotels', hotelRouter)
-
+app.use('/cities', cityRouter)
+app.use('/countries', countryRouter)
 
 db()
 app.listen(config.PORT, () => {

@@ -1,12 +1,6 @@
 import mongoose from "mongoose";
 
-const HotelSchema = new mongoose.Schema({
-  hotelId: {
-    type: Number,
-    required: true,
-    unique: true
-  },
-
+export const HotelSchema = new mongoose.Schema({
   hotelName: {
     type: String,
     required: true,
@@ -48,12 +42,6 @@ const HotelSchema = new mongoose.Schema({
     required: true
   },
 
-  hotelFeedback: [{
-    user: String,
-    rating: Number,
-    comment: String
-  }]
-
 }, {
   versionKey: false,
 })
@@ -63,6 +51,15 @@ const Hotel = mongoose.model('Hotel', HotelSchema)
 export default Hotel
 
 /*
+
+hotelFeedback: [{
+  user: String,
+  rating: Number,
+  comment: String
+}]
+
+? ==========================================
+
 
 hotelFeatures: [{
   type: String,

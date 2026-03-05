@@ -1,37 +1,20 @@
 import mongoose from "mongoose";
-import HotelSchema from './Hotel.js'
+import { CitySchema } from "./City.js";
 
 const CountrySchema = new mongoose.Schema({
-  id: {
-    type: Number,
-    required: true,
-    unique: true
-  },
 
-  cityName: {
+  countryName: {
     type: String,
-    required: true,
+    required: true
   },
 
-  location: {
-    lat: {
-      type: Number,
-      required: true,
-      default: 41.3775
-    },
-
-    long: {
-      type: Number,
-      required: true,
-      default: 64.5853
-    }
-  },
-
-  hotels: [HotelSchema]
-
+  // regions: [{
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   ref: "Region"
+  // }] 
+  regions: [CitySchema]
 }, {
   versionKey: false,
-  timestamps: true
 })
 
 const Country = mongoose.model('Country', CountrySchema)
