@@ -1,19 +1,23 @@
-const checkPermission = (requirePermission) => (req, res) => {
+const checkPermission = (requiredPermission) => (req, res, next) => {
   const user = req.user
 
   if (!user) {
-    return res.status(401).json({ msg: "Unauthorized" });
+    return res.status(401).json({ msg: "Unauthorized" })
   }
 
-  if (user.role === 'admin' && user.permissions.watchAllUsers === true) {
-    return next();
+  // admin: полный доступ
+  if (user.role === "admin") {
+    return next()
   }
 
-  if (user.permissions && user.permissions[requiredPermission] === true) {
-    return next();
+  // user: проверяем permissions
+  if (user.permissions?.[requiredPermission] === true) {
+    return next()
   }
 
   return res.status(403).json({
     msg: `Access denied. You don't have '${requiredPermission}' permission.`
-  });
+  })
 }
+
+export { checkPermission }

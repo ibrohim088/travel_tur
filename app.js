@@ -3,6 +3,7 @@ import cors from 'cors'
 import config from './src/shared/config.js'
 import db from './src/db/index.js'
 import userRouter from './src/routes/user.js'
+import hotelRouter from './src/routes/hotel.js'
 
 const app = express()
 
@@ -11,6 +12,7 @@ app.use(cors({ origin: 'http://localhost:5173' || 'http://localhost:5174' }))
 app.use(express.json())
 
 app.use('/users', userRouter)
+app.use('/hotels', hotelRouter)
 
 
 db()

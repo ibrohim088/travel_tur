@@ -1,0 +1,1259 @@
+[
+  {
+    "country": "Uzbekistan",
+    "regions": [
+      {
+        "_id": "65e8a1a1f1a2b3c4d5e6f701",
+        "cityName": "Samarqand",
+        "lat": 39.627,
+        "long": 66.975,
+        "hotels": [
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6f801",
+            "hotelName": "Registan Plaza",
+            "hotelRating": 4.5,
+            "hotelFeatures": [
+              "wifi",
+              "pool",
+              "restaurant",
+              "bar",
+              "parking"
+            ],
+            "hotelLocation": {
+              "lat": 39.6542,
+              "long": 66.9597
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6f802",
+            "hotelName": "Savitsky Plaza",
+            "hotelRating": 5,
+            "hotelFeatures": [
+              "luxury",
+              "spa",
+              "gym",
+              "free-wifi"
+            ],
+            "hotelLocation": {
+              "lat": 39.6421,
+              "long": 66.9812
+            },
+            "hotelCheckIn": "15:00",
+            "hotelCheckOut": "11:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6f803",
+            "hotelName": "Diyora Hotel",
+            "hotelRating": 3.8,
+            "hotelFeatures": [
+              "breakfast",
+              "central",
+              "clean"
+            ],
+            "hotelLocation": {
+              "lat": 39.6501,
+              "long": 66.962
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6f804",
+            "hotelName": "Grand Samarkand Superior",
+            "hotelRating": 4.2,
+            "hotelFeatures": [
+              "classic-design",
+              "pool",
+              "sauna"
+            ],
+            "hotelLocation": {
+              "lat": 39.648,
+              "long": 66.951
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6f805",
+            "hotelName": "Bibikhanum Hotel",
+            "hotelRating": 4.0,
+            "hotelFeatures": [
+              "terrace",
+              "historic-view",
+              "oriental"
+            ],
+            "hotelLocation": {
+              "lat": 39.661,
+              "long": 66.979
+            },
+            "hotelCheckIn": "13:00",
+            "hotelCheckOut": "11:30",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6f806",
+            "hotelName": "Emir Han Hotel",
+            "hotelRating": 4.1,
+            "hotelFeatures": [
+              "pool",
+              "parking",
+              "family-friendly"
+            ],
+            "hotelLocation": {
+              "lat": 39.635,
+              "long": 66.968
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6f807",
+            "hotelName": "L'Argamak Hotel",
+            "hotelRating": 4.7,
+            "hotelFeatures": [
+              "boutique",
+              "garden",
+              "quiet"
+            ],
+            "hotelLocation": {
+              "lat": 39.6495,
+              "long": 66.9705
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6f808",
+            "hotelName": "Hotel Dilimah",
+            "hotelRating": 4.3,
+            "hotelFeatures": [
+              "modern",
+              "business-center",
+              "wifi"
+            ],
+            "hotelLocation": {
+              "lat": 39.645,
+              "long": 66.94
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6f809",
+            "hotelName": "Movenpick Samarkand",
+            "hotelRating": 5,
+            "hotelFeatures": [
+              "luxury",
+              "brand",
+              "spa",
+              "pool"
+            ],
+            "hotelLocation": {
+              "lat": 39.652,
+              "long": 66.955
+            },
+            "hotelCheckIn": "15:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6f810",
+            "hotelName": "Ideal Hotel",
+            "hotelRating": 3.5,
+            "hotelFeatures": [
+              "budget",
+              "friendly-staff",
+              "wifi"
+            ],
+            "hotelLocation": {
+              "lat": 39.64,
+              "long": 66.95
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          }
+        ]
+      },
+      {
+        "_id": "65e8a1a1f1a2b3c4d5e6f702",
+        "cityName": "Toshkent",
+        "lat": 41.2995,
+        "long": 69.2401,
+        "hotels": [
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6f901",
+            "hotelName": "Hyatt Regency Tashkent",
+            "hotelRating": 5,
+            "hotelFeatures": [
+              "pool",
+              "spa",
+              "gym",
+              "central"
+            ],
+            "hotelLocation": {
+              "lat": 41.3165,
+              "long": 69.2736
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6f902",
+            "hotelName": "Hilton Tashkent City",
+            "hotelRating": 5,
+            "hotelFeatures": [
+              "sky-bar",
+              "pool",
+              "modern"
+            ],
+            "hotelLocation": {
+              "lat": 41.3122,
+              "long": 69.2541
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6f903",
+            "hotelName": "Wyndham Tashkent",
+            "hotelRating": 4.5,
+            "hotelFeatures": [
+              "classic",
+              "indoor-pool",
+              "restaurant"
+            ],
+            "hotelLocation": {
+              "lat": 41.321,
+              "long": 69.281
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6f904",
+            "hotelName": "Lotte City Hotel Tashkent Palace",
+            "hotelRating": 4.4,
+            "hotelFeatures": [
+              "historic",
+              "pool",
+              "theater-view"
+            ],
+            "hotelLocation": {
+              "lat": 41.311,
+              "long": 69.269
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6f905",
+            "hotelName": "Courtyard by Marriott",
+            "hotelRating": 4.6,
+            "hotelFeatures": [
+              "modern",
+              "business",
+              "gym"
+            ],
+            "hotelLocation": {
+              "lat": 41.285,
+              "long": 69.262
+            },
+            "hotelCheckIn": "15:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6f906",
+            "hotelName": "Radisson Blu Hotel",
+            "hotelRating": 4.3,
+            "hotelFeatures": [
+              "garden",
+              "pool",
+              "quiet"
+            ],
+            "hotelLocation": {
+              "lat": 41.334,
+              "long": 69.284
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6f907",
+            "hotelName": "Ichan Qala Premium",
+            "hotelRating": 4.7,
+            "hotelFeatures": [
+              "oriental",
+              "villas",
+              "pool"
+            ],
+            "hotelLocation": {
+              "lat": 41.289,
+              "long": 69.252
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6f908",
+            "hotelName": "City Palace Hotel",
+            "hotelRating": 4.0,
+            "hotelFeatures": [
+              "classic",
+              "central",
+              "large-rooms"
+            ],
+            "hotelLocation": {
+              "lat": 41.318,
+              "long": 69.278
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6f909",
+            "hotelName": "InterContinental Tashkent",
+            "hotelRating": 5,
+            "hotelFeatures": [
+              "luxury",
+              "new",
+              "top-tier"
+            ],
+            "hotelLocation": {
+              "lat": 41.325,
+              "long": 69.272
+            },
+            "hotelCheckIn": "15:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6f910",
+            "hotelName": "Hampton by Hilton",
+            "hotelRating": 4.2,
+            "hotelFeatures": [
+              "modern",
+              "wifi",
+              "clean-beds"
+            ],
+            "hotelLocation": {
+              "lat": 41.3105,
+              "long": 69.2825
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          }
+        ]
+      },
+      {
+        "_id": "65e8a1a1f1a2b3c4d5e6f703",
+        "cityName": "Buxoro",
+        "lat": 39.7681,
+        "long": 64.4556,
+        "hotels": [
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fa01",
+            "hotelName": "Sahid Zarafshon",
+            "hotelRating": 4.1,
+            "hotelFeatures": [
+              "large",
+              "pool",
+              "events"
+            ],
+            "hotelLocation": {
+              "lat": 39.7622,
+              "long": 64.4215
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fa02",
+            "hotelName": "Mercure Bukhara Old Town",
+            "hotelRating": 4.8,
+            "hotelFeatures": [
+              "modern-oriental",
+              "spa",
+              "terrace"
+            ],
+            "hotelLocation": {
+              "lat": 39.773,
+              "long": 64.415
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fa03",
+            "hotelName": "Wyndham Bukhara",
+            "hotelRating": 4.3,
+            "hotelFeatures": [
+              "gym",
+              "wifi",
+              "business"
+            ],
+            "hotelLocation": {
+              "lat": 39.7747,
+              "long": 64.4286
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fa04",
+            "hotelName": "Hotel Omar Khayyam",
+            "hotelRating": 3.9,
+            "hotelFeatures": [
+              "traditional-courtyard",
+              "central",
+              "history"
+            ],
+            "hotelLocation": {
+              "lat": 39.776,
+              "long": 64.416
+            },
+            "hotelCheckIn": "13:00",
+            "hotelCheckOut": "11:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fa05",
+            "hotelName": "Bukhara Palace",
+            "hotelRating": 3.5,
+            "hotelFeatures": [
+              "large-hotel",
+              "classic",
+              "pool"
+            ],
+            "hotelLocation": {
+              "lat": 39.765,
+              "long": 64.425
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fa06",
+            "hotelName": "Lyabi House Hotel",
+            "hotelRating": 4.2,
+            "hotelFeatures": [
+              "old-city",
+              "authentic",
+              "breakfast"
+            ],
+            "hotelLocation": {
+              "lat": 39.7725,
+              "long": 64.42
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fa07",
+            "hotelName": "Malika Bukhara",
+            "hotelRating": 3.8,
+            "hotelFeatures": [
+              "cozy",
+              "wifi",
+              "friendly"
+            ],
+            "hotelLocation": {
+              "lat": 39.775,
+              "long": 64.423
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fa08",
+            "hotelName": "K.Komil Hotel",
+            "hotelRating": 4.5,
+            "hotelFeatures": [
+              "antique-style",
+              "boutique",
+              "traditional"
+            ],
+            "hotelLocation": {
+              "lat": 39.771,
+              "long": 64.414
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fa09",
+            "hotelName": "Amulet Hotel",
+            "hotelRating": 4.0,
+            "hotelFeatures": [
+              "madrasah-style",
+              "historic",
+              "central"
+            ],
+            "hotelLocation": {
+              "lat": 39.774,
+              "long": 64.418
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fa10",
+            "hotelName": "Asia Bukhara",
+            "hotelRating": 3.7,
+            "hotelFeatures": [
+              "pool",
+              "parking",
+              "restaurant"
+            ],
+            "hotelLocation": {
+              "lat": 39.772,
+              "long": 64.426
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          }
+        ]
+      },
+      {
+        "_id": "65e8a1a1f1a2b3c4d5e6f704",
+        "cityName": "Xiva",
+        "lat": 41.3775,
+        "long": 60.3585,
+        "hotels": [
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fb01",
+            "hotelName": "Farovon Khiva",
+            "hotelRating": 5,
+            "hotelFeatures": [
+              "spa",
+              "luxury",
+              "pool",
+              "conference"
+            ],
+            "hotelLocation": {
+              "lat": 41.3812,
+              "long": 60.3621
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fb02",
+            "hotelName": "Arkanchi Hotel",
+            "hotelRating": 3.6,
+            "hotelFeatures": [
+              "terrace",
+              "fortress-view",
+              "wifi"
+            ],
+            "hotelLocation": {
+              "lat": 41.3784,
+              "long": 60.3602
+            },
+            "hotelCheckIn": "13:00",
+            "hotelCheckOut": "11:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fb03",
+            "hotelName": "Asia Khiva",
+            "hotelRating": 3.8,
+            "hotelFeatures": [
+              "large-groups",
+              "pool",
+              "restaurant"
+            ],
+            "hotelLocation": {
+              "lat": 41.375,
+              "long": 60.365
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fb04",
+            "hotelName": "Orient Star Khiva",
+            "hotelRating": 4.0,
+            "hotelFeatures": [
+              "madrasah-stay",
+              "unique",
+              "central"
+            ],
+            "hotelLocation": {
+              "lat": 41.377,
+              "long": 60.358
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fb05",
+            "hotelName": "Malika Khiva",
+            "hotelRating": 3.7,
+            "hotelFeatures": [
+              "wooden-carving",
+              "traditional",
+              "cozy"
+            ],
+            "hotelLocation": {
+              "lat": 41.379,
+              "long": 60.361
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fb06",
+            "hotelName": "Khiva Ichan Qala Hotel",
+            "hotelRating": 4.2,
+            "hotelFeatures": [
+              "inside-fortress",
+              "historic",
+              "breakfast"
+            ],
+            "hotelLocation": {
+              "lat": 41.378,
+              "long": 60.3595
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fb07",
+            "hotelName": "Zukhro Boutique",
+            "hotelRating": 4.4,
+            "hotelFeatures": [
+              "family-run",
+              "clean",
+              "view"
+            ],
+            "hotelLocation": {
+              "lat": 41.3795,
+              "long": 60.3605
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fb08",
+            "hotelName": "Shaherezada Hotel",
+            "hotelRating": 3.5,
+            "hotelFeatures": [
+              "budget",
+              "friendly",
+              "central"
+            ],
+            "hotelLocation": {
+              "lat": 41.3785,
+              "long": 60.3575
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fb09",
+            "hotelName": "Polvon Qori Hotel",
+            "hotelRating": 3.9,
+            "hotelFeatures": [
+              "madrasah",
+              "traditional",
+              "quiet"
+            ],
+            "hotelLocation": {
+              "lat": 41.38,
+              "long": 60.363
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fb10",
+            "hotelName": "Mussala Hotel",
+            "hotelRating": 3.8,
+            "hotelFeatures": [
+              "new",
+              "modern-rooms",
+              "wifi"
+            ],
+            "hotelLocation": {
+              "lat": 41.382,
+              "long": 60.364
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          }
+        ]
+      },
+      {
+        "_id": "65e8a1a1f1a2b3c4d5e6f705",
+        "cityName": "Nukus",
+        "lat": 42.4533,
+        "long": 59.6108,
+        "hotels": [
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fc01",
+            "hotelName": "Jipek Joli",
+            "hotelRating": 3.5,
+            "hotelFeatures": [
+              "museum-nearby",
+              "wifi",
+              "traditional"
+            ],
+            "hotelLocation": {
+              "lat": 42.4641,
+              "long": 59.6065
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fc02",
+            "hotelName": "Ratmina Hotel",
+            "hotelRating": 3.4,
+            "hotelFeatures": [
+              "parking",
+              "breakfast",
+              "city-center"
+            ],
+            "hotelLocation": {
+              "lat": 42.4598,
+              "long": 59.6122
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fc03",
+            "hotelName": "Tashkent Hotel Nukus",
+            "hotelRating": 3.0,
+            "hotelFeatures": [
+              "classic",
+              "budget",
+              "central"
+            ],
+            "hotelLocation": {
+              "lat": 42.461,
+              "long": 59.609
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fc04",
+            "hotelName": "Nukus Hotel",
+            "hotelRating": 3.1,
+            "hotelFeatures": [
+              "standard",
+              "wifi",
+              "restaurant"
+            ],
+            "hotelLocation": {
+              "lat": 42.455,
+              "long": 59.615
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fc05",
+            "hotelName": "Pana Hotel",
+            "hotelRating": 3.6,
+            "hotelFeatures": [
+              "modern",
+              "clean",
+              "friendly"
+            ],
+            "hotelLocation": {
+              "lat": 42.468,
+              "long": 59.602
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fc06",
+            "hotelName": "Rahnamo Hotel",
+            "hotelRating": 3.2,
+            "hotelFeatures": [
+              "basic",
+              "parking",
+              "breakfast"
+            ],
+            "hotelLocation": {
+              "lat": 42.463,
+              "long": 59.608
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fc07",
+            "hotelName": "Aral Hotel",
+            "hotelRating": 2.9,
+            "hotelFeatures": [
+              "budget",
+              "simple",
+              "central"
+            ],
+            "hotelLocation": {
+              "lat": 42.465,
+              "long": 59.61
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fc08",
+            "hotelName": "Elite Hotel Nukus",
+            "hotelRating": 3.7,
+            "hotelFeatures": [
+              "modern",
+              "quiet",
+              "wifi"
+            ],
+            "hotelLocation": {
+              "lat": 42.47,
+              "long": 59.6
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fc09",
+            "hotelName": "Doslyk Hotel",
+            "hotelRating": 3.0,
+            "hotelFeatures": [
+              "standard",
+              "restaurant",
+              "parking"
+            ],
+            "hotelLocation": {
+              "lat": 42.458,
+              "long": 59.613
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fc10",
+            "hotelName": "Karakalpakstan Hotel",
+            "hotelRating": 3.3,
+            "hotelFeatures": [
+              "classic",
+              "spacious",
+              "central"
+            ],
+            "hotelLocation": {
+              "lat": 42.4605,
+              "long": 59.6115
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          }
+        ]
+      },
+      {
+        "_id": "65e8a1a1f1a2b3c4d5e6f706",
+        "cityName": "Farg'ona",
+        "lat": 40.3848,
+        "long": 71.7862,
+        "hotels": [
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fd01",
+            "hotelName": "Asia Fergana",
+            "hotelRating": 4.0,
+            "hotelFeatures": [
+              "pool",
+              "garden",
+              "gym"
+            ],
+            "hotelLocation": {
+              "lat": 40.3892,
+              "long": 71.7815
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fd02",
+            "hotelName": "Grand Fergana",
+            "hotelRating": 3.5,
+            "hotelFeatures": [
+              "restaurant",
+              "bar",
+              "central"
+            ],
+            "hotelLocation": {
+              "lat": 40.3755,
+              "long": 71.7922
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fd03",
+            "hotelName": "Taj Mahal Hotel",
+            "hotelRating": 3.8,
+            "hotelFeatures": [
+              "banquet-hall",
+              "large-rooms",
+              "wifi"
+            ],
+            "hotelLocation": {
+              "lat": 40.385,
+              "long": 71.785
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fd04",
+            "hotelName": "Diyor Hotel",
+            "hotelRating": 3.4,
+            "hotelFeatures": [
+              "budget",
+              "friendly",
+              "parking"
+            ],
+            "hotelLocation": {
+              "lat": 40.382,
+              "long": 71.78
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fd05",
+            "hotelName": "Club 777",
+            "hotelRating": 4.1,
+            "hotelFeatures": [
+              "luxury-vibe",
+              "pool",
+              "private"
+            ],
+            "hotelLocation": {
+              "lat": 40.395,
+              "long": 71.775
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fd06",
+            "hotelName": "Ziyorat Hotel",
+            "hotelRating": 3.2,
+            "hotelFeatures": [
+              "traditional",
+              "breakfast",
+              "clean"
+            ],
+            "hotelLocation": {
+              "lat": 40.38,
+              "long": 71.79
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fd07",
+            "hotelName": "Fergana Hotel",
+            "hotelRating": 3.0,
+            "hotelFeatures": [
+              "standard",
+              "central",
+              "wifi"
+            ],
+            "hotelLocation": {
+              "lat": 40.384,
+              "long": 71.788
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fd08",
+            "hotelName": "Hotel Premier",
+            "hotelRating": 3.9,
+            "hotelFeatures": [
+              "modern",
+              "business",
+              "comfort"
+            ],
+            "hotelLocation": {
+              "lat": 40.39,
+              "long": 71.783
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fd09",
+            "hotelName": "Status House",
+            "hotelRating": 4.3,
+            "hotelFeatures": [
+              "boutique",
+              "design",
+              "quiet"
+            ],
+            "hotelLocation": {
+              "lat": 40.392,
+              "long": 71.778
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fd10",
+            "hotelName": "Atlas Hotel",
+            "hotelRating": 3.6,
+            "hotelFeatures": [
+              "national-style",
+              "wifi",
+              "restaurant"
+            ],
+            "hotelLocation": {
+              "lat": 40.3815,
+              "long": 71.7845
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          }
+        ]
+      },
+      {
+        "_id": "65e8a1a1f1a2b3c4d5e6f707",
+        "cityName": "Shahrisabs",
+        "lat": 39.0553,
+        "long": 66.8288,
+        "hotels": [
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fe01",
+            "hotelName": "Kesh Palace",
+            "hotelRating": 3.6,
+            "hotelFeatures": [
+              "traditional",
+              "garden",
+              "view"
+            ],
+            "hotelLocation": {
+              "lat": 39.0592,
+              "long": 66.8321
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fe02",
+            "hotelName": "Shahrisabs Star",
+            "hotelRating": 3.4,
+            "hotelFeatures": [
+              "parking",
+              "breakfast",
+              "central"
+            ],
+            "hotelLocation": {
+              "lat": 39.0611,
+              "long": 66.8255
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fe03",
+            "hotelName": "Grand Ak Saray",
+            "hotelRating": 3.7,
+            "hotelFeatures": [
+              "pool",
+              "near-monument",
+              "wifi"
+            ],
+            "hotelLocation": {
+              "lat": 39.063,
+              "long": 66.83
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fe04",
+            "hotelName": "Hotel Shahr-e-Sabz",
+            "hotelRating": 3.2,
+            "hotelFeatures": [
+              "basic",
+              "restaurant",
+              "central"
+            ],
+            "hotelLocation": {
+              "lat": 39.058,
+              "long": 66.828
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fe05",
+            "hotelName": "Zafar Hotel",
+            "hotelRating": 3.0,
+            "hotelFeatures": [
+              "budget",
+              "friendly",
+              "parking"
+            ],
+            "hotelLocation": {
+              "lat": 39.055,
+              "long": 66.835
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fe06",
+            "hotelName": "Orient Star Shahrisabs",
+            "hotelRating": 3.8,
+            "hotelFeatures": [
+              "historic",
+              "courtyard",
+              "clean"
+            ],
+            "hotelLocation": {
+              "lat": 39.06,
+              "long": 66.827
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fe07",
+            "hotelName": "Nilufar Hotel",
+            "hotelRating": 3.3,
+            "hotelFeatures": [
+              "family-run",
+              "authentic",
+              "wifi"
+            ],
+            "hotelLocation": {
+              "lat": 39.057,
+              "long": 66.831
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fe08",
+            "hotelName": "Lola Hotel",
+            "hotelRating": 3.1,
+            "hotelFeatures": [
+              "simple",
+              "breakfast",
+              "quiet"
+            ],
+            "hotelLocation": {
+              "lat": 39.053,
+              "long": 66.833
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fe09",
+            "hotelName": "Bek Hotel",
+            "hotelRating": 3.5,
+            "hotelFeatures": [
+              "modern-style",
+              "parking",
+              "restaurant"
+            ],
+            "hotelLocation": {
+              "lat": 39.062,
+              "long": 66.829
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          },
+          {
+            "_id": "65e8a1a1f1a2b3c4d5e6fe10",
+            "hotelName": "Chorsu Hotel",
+            "hotelRating": 3.0,
+            "hotelFeatures": [
+              "market-nearby",
+              "budget",
+              "central"
+            ],
+            "hotelLocation": {
+              "lat": 39.059,
+              "long": 66.826
+            },
+            "hotelCheckIn": "14:00",
+            "hotelCheckOut": "12:00",
+            "hotelFeedback": []
+          }
+        ]
+      }
+    ]
+  }
+]

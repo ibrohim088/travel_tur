@@ -1,21 +1,23 @@
-import express from 'express';
-import { getAllUsers } from '../controllers/userController.js';
-import { checkPermission } from '../middlewares/checkPermission.js';
-import { authenticateToken } from '../middlewares/auth.js';
+import express from 'express'
+import { getAllUsers } from '../controllers/userController.js'
+import { getFinanceReports } from '../controllers/adminController.js'
+import { checkPermission } from '../middlewares/checkPermission.js'
+import { authenticateToken } from '../middlewares/auth.js'
 
-const router = express.Router();
+const router = express.Router()
 
-router.get('/finance-reports',
+router.get(
+  '/finance-reports',
   authenticateToken,
   checkPermission('finance'),
-  (req, res) => {
-    res.json({ msg: "Welcome to Finance Department" });
-  });
+  getFinanceReports
+)
 
-router.get('/all-users',
+router.get(
+  '/all-users',
   authenticateToken,
   checkPermission('watchAllUsers'),
   getAllUsers
-);
+)
 
-export default router;
+export default router
