@@ -6,7 +6,7 @@ import generateToken from '../utilities/createToken.js'
 
 const getAllUsers = async (req, res) => {
   try {
-    const users = await User.find()
+    const users = await User.find().select('-password')
 
     res.status(200).json(users)
   } catch (e) {
@@ -17,7 +17,7 @@ const getAllUsers = async (req, res) => {
 const getOneUser = async (req, res) => {
   try {
     const { id } = req.params
-    const findOneUser = await User.findById(id)
+    const findOneUser = await User.findById(id).select('-password')
 
     if (!findOneUser) {
       return res.status(404).json({ msg: 'User not found' })
@@ -31,7 +31,7 @@ const getOneUser = async (req, res) => {
 
 const registerUserOrAdmin = async (req, res) => {
   try {
-    const { name, lastname, password, phone, email, role } = req.body
+    const { name, lastname, password, phone, email, role, walletBalance } = req.body
 
     if (![name, lastname, password, phone, email].every(Boolean)) {
       return res.status(400).json({ msg: 'Required fields missing' })
@@ -51,11 +51,19 @@ const registerUserOrAdmin = async (req, res) => {
       password: hashedPass,
       phone,
       email,
+      walletBalance
     }
 
     if (role) payload.role = role
     if (role === "admin") {
-      payload.permissions = { watchAllUsers: true, finance: true, report: true, tourPackage: true, };
+      payload.permissions = {
+        watchAllUsers: true,
+        finance: true,
+        report: true,
+        tourPackage: true,
+        hotels: true,
+        bookings: true
+      };
     }
 
     const createdUser = await User.create(payload)
@@ -82,7 +90,7 @@ const logInUserOrAdmin = async (req, res) => {
     }
 
     const query = email ? { email } : { phone }
-    const user = await User.findOne(query)
+    const user = await User.findOne(query).select('+password')
 
     if (!user) {
       return res.status(401).json({ msg: 'Invalid credentials' })
@@ -93,7 +101,7 @@ const logInUserOrAdmin = async (req, res) => {
       return res.status(401).json({ msg: 'Invalid credetionals' })
     }
 
-    const token = jwt.sign({ id: user._id, email: user.email }, config.JWT_SECRET, { expiresIn: '30d' })
+    const token = jwt.sign({ id: user._id, email: user.email, user: user.role }, config.JWT_SECRET, { expiresIn: '30d' })
 
     const { password: _, ...userWithoutPassword } = user.toObject()
     res.status(201).json({ token, user: userWithoutPassword })
@@ -105,18 +113,19 @@ const logInUserOrAdmin = async (req, res) => {
 const updateUserOrAdmin = async (req, res) => {
   try {
     const { id } = req.params
-    const user = await User.findById(id)
+    if (req.body.password) {
+      req.body.password = await bcrypt.hash(req.body.password, 10)
+    }
 
-    if (!user) {
+    const updatedUser = await User.findByIdAndUpdate(id, { $set: req.body }, { new: true, runValidators: true }).select('-password')
+
+    if (!updatedUser) {
       return res.status(404).json({ msg: "User not found" })
     }
 
-    user.set(req.body)
-    const updatedUser = await user.save()
-
-    res.status(201).json({ data: updatedUser })
+    res.status(200).json({ data: updatedUser })
   } catch (error) {
-
+    res.status(500).json({ msg: error.message })
   }
 }
 

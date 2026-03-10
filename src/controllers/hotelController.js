@@ -1,4 +1,5 @@
 import Hotel from '../schema/Hotel.js'
+import City from '../schema/City.js'
 
 const getAllHotels = async (req, res) => {
   try {
@@ -16,7 +17,7 @@ const getAllHotels = async (req, res) => {
 
 const getOneHotel = async (req, res) => {
   try {
-    const { id } = req.paramas
+    const { id } = req.params
     const findOneHotel = await Hotel.findById(id)
 
     if (!findOneHotel) {
@@ -33,6 +34,13 @@ const createHotel = async (req, res) => {
   try {
     const newHotel = new Hotel(req.body)
     await newHotel.save()
+
+    if (req.body.cityId) {
+      await City.findByIdAndUpdate(
+        req.body.cityId,
+        { $push: { hotels: newHotel._id } }
+      )
+    }
 
     res.status(201).json({ msg: "Successfuly created Hotel!", data: newHotel })
   } catch (error) {
@@ -57,8 +65,8 @@ const updateHotel = async (req, res) => {
 }
 
 const deleteHotel = async (req, res) => {
-  try {
-    const { id } = req.pramas
+try {
+    const { id } = req.params
     const deletedHotel = await Hotel.findByIdAndDelete(id)
 
     if (!deletedHotel) {

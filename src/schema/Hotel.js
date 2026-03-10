@@ -1,6 +1,12 @@
 import mongoose from "mongoose";
 
 export const HotelSchema = new mongoose.Schema({
+  cityId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'City',
+    required: true,
+  },
+
   hotelName: {
     type: String,
     required: true,
@@ -22,26 +28,33 @@ export const HotelSchema = new mongoose.Schema({
     lat: {
       type: Number,
       required: true,
+      unique: true,
       default: 41.330269
     },
 
     long: {
       type: Number,
       required: true,
+      unique: true,
       default: 69.279699
     }
   },
 
-  hotelCheckIn: {
-    type: String,
+  hotelPrice: {
+    type: Number,
     required: true,
+    default: 0
   },
 
-  hotelCheckOut: {
+  hotelCheckInTime: {
     type: String,
-    required: true
+    required: false,
   },
 
+  hotelCheckOutTime: {
+    type: String,
+    required: false
+  },
 }, {
   versionKey: false,
 })
@@ -49,49 +62,3 @@ export const HotelSchema = new mongoose.Schema({
 const Hotel = mongoose.model('Hotel', HotelSchema)
 
 export default Hotel
-
-/*
-
-hotelFeedback: [{
-  user: String,
-  rating: Number,
-  comment: String
-}]
-
-? ==========================================
-
-
-hotelFeatures: [{
-  type: String,
-  required: true,
-  lowercase: true,
-  trim: true
-}],
-
-{
-  "hotelFeedback": [
-    "Very good hotel",
-    "Nice service",
-    "Clean rooms"
-  ]
-}
-
-? ==========================================
-
-hotelFeedback: [{
-  user: String,
-  rating: Number,
-  comment: String
-}]
-
-{
-  "hotelFeedback": [
-    {
-      "user": "John",
-      "rating": 5,
-      "comment": "Amazing hotel"
-    }
-  ]
-}
-
-*/

@@ -5,12 +5,10 @@ const checkPermission = (requiredPermission) => (req, res, next) => {
     return res.status(401).json({ msg: "Unauthorized" })
   }
 
-  // admin: полный доступ
   if (user.role === "admin") {
     return next()
   }
 
-  // user: проверяем permissions
   if (user.permissions?.[requiredPermission] === true) {
     return next()
   }

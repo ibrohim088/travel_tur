@@ -2,12 +2,12 @@ import Country from '../schema/Country.js'
 
 const getAllCountry = async (req, res) => {
   try {
-    const countries = await Country.find()
-
-    if (!countries) {
-      return res.status(404).json({ msg: "Countries not found!" })
-    }
-
+    const countries = await Country.find().populate({
+      path: 'regions',
+      populate: {
+        path: 'hotels'
+      }
+    });
     res.status(200).json(countries)
   } catch (error) {
     res.status(500).json({ msg: error.message })
@@ -15,16 +15,15 @@ const getAllCountry = async (req, res) => {
 }
 
 const getOneCountry = async (req, res) => {
+
   try {
     const { id } = req.params
-
-    const findCountry = await Country.findByIdAndDelete(id)
-
-    if (!findCountry) {
-      return res.status(404).json({ msg: "Countries not found!" })
-    }
-
-    res.status(200).json(findCountry)
+    const country = await Country.findById(id).populate({
+      path: 'regions',
+      populate: { path: 'hotels' }
+    });
+    if (!country) return res.status(404).json({ msg: "Country not found" })
+    res.status(200).json(country)
   } catch (error) {
     res.status(500).json({ msg: error.message })
   }
@@ -59,7 +58,7 @@ const updateCountry = async (req, res) => {
 
 const deleteCountry = async (req, res) => {
   try {
-    const { id } = req.pramas
+    const { id } = req.params
     const deletedCountry = await Country.findByIdAndDelete(id)
 
     if (!deletedCountry) {

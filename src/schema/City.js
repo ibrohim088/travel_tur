@@ -1,10 +1,16 @@
 import mongoose from "mongoose";
-import { HotelSchema } from './Hotel.js'
 
 export const CitySchema = new mongoose.Schema({
+  countryId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Country',
+    required: true
+  },
+
   cityName: {
     type: String,
     required: true,
+    default: "Tashkent"
   },
 
   location: {
@@ -21,11 +27,10 @@ export const CitySchema = new mongoose.Schema({
     }
   },
 
-  // hotels: [{
-  //   type: mongoose.Schema.Types.ObjectId,
-  //   ref: 'Hotel'
-  // }]
-  hotels: [{ HotelSchema }]
+  hotels: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Hotel'
+  }]
 }, {
   versionKey: false,
 })

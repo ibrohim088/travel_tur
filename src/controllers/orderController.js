@@ -1,8 +1,14 @@
+import mongoose from 'mongoose'
 import Order from '../schema/Order.js'
+import User from '../schema/User.js'
 
 const getAllOrders = async (req, res) => {
   try {
-    const orders = await Order.find().populate('userId').populate('hotelId');
+    const orders = await Order.find()
+      .populate('userId', "name email")
+      .populate('cityId', 'cityName')
+      .populate('countryId', 'countryName')
+      .populate({ path: 'hotelId', select: 'hotelName' })
 
     res.status(200).json(orders)
   } catch (error) {
@@ -13,7 +19,14 @@ const getAllOrders = async (req, res) => {
 const getOneOrder = async (req, res) => {
   try {
     const { id } = req.params
-    const findOrder = await Order.findById(id).populate('userId hotelId');
+    const findOrder = await Order.findById(id).populate('userId', 'name')
+      .populate({
+        path: 'hotelId',
+        populate: {
+          path: 'cityId',
+          populate: { path: 'countryId' }
+        }
+      })
 
     if (!findOrder) {
       return res.status(404).json({ msg: "Order not founded!" })
@@ -26,20 +39,48 @@ const getOneOrder = async (req, res) => {
 }
 
 const createOrder = async (req, res) => {
-  try {
-    const createOrder = new Order(req.body)
-    await createOrder.save()
-
-    res.status(201).json({ msg: 'Order created successfuly!', data: createOrder })
-  } catch (error) {
-    res.status(400).json({ msg: error.message })
-  }
+  /*
+    const session = await mongoose.startSession()
+    session.startTransaction()
+    try {
+      const { userId, detailes } = req.body
+  
+      const user = await User.findById(userId).session(session)
+  
+      if (!user) {
+        res.status(404).json({ msg: "User not found" })
+      }
+  
+      
+  
+      const newOrder = new Order(req.body)
+      await newOrder.save({ session })
+  
+      await session.commitTransaction()
+  
+      const populateOrder = await Order.findById(newOrder._id).populate('userId', 'name email').populate({
+        path: 'hotelId',
+        populate: ''
+      })
+  
+      res.status(201).json({ msg: 'Order succsessfuly created', data: newOrder })
+    } catch (error) {
+      await session.abortTransaction();
+      res.status(500).json({ msg: error.message })
+    } finally {
+      await session.endSession();
+    }
+    */
 }
 
 const updateOrder = async (req, res) => {
   try {
     const { id } = req.params
-    const updatedOrder = await Order.findByIdAndUpdate(id, req.body,)
+    const updatedOrder = await Order.findByIdAndUpdate(id, req.body, { new: true })
+      .populate({
+        path: 'hotelId',
+        populate: { path: 'cityId', populate: { path: 'countryId' } }
+      });
 
     if (!updatedOrder) {
       return res.status(404).json({ msg: 'Update order not found!' })
