@@ -28,14 +28,12 @@ export const HotelSchema = new mongoose.Schema({
     lat: {
       type: Number,
       required: true,
-      unique: true,
       default: 41.330269
     },
 
     long: {
       type: Number,
       required: true,
-      unique: true,
       default: 69.279699
     }
   },
@@ -44,16 +42,6 @@ export const HotelSchema = new mongoose.Schema({
     type: Number,
     required: true,
     default: 0
-  },
-
-  hotelCheckInTime: {
-    type: String,
-    required: false,
-  },
-
-  hotelCheckOutTime: {
-    type: String,
-    required: false
   },
 }, {
   versionKey: false,

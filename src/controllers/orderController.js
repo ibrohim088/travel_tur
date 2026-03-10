@@ -1,6 +1,5 @@
-import mongoose from 'mongoose'
 import Order from '../schema/Order.js'
-import User from '../schema/User.js'
+// import User from '../schema/User.js'
 
 const getAllOrders = async (req, res) => {
   try {
