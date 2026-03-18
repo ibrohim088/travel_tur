@@ -9,13 +9,13 @@ import countryRouter from './src/routes/country.js'
 import cityRouter from './src/routes/city.js'
 import hotelRouter from './src/routes/hotel.js'
 import tourRouter from './src/routes/tour.js'
-
 import orderRouter from './src/routes/order.js'
 
+import octoRouter from './src/routes/octo.js'
 
 const app = express()
 
-app.use(cors({ origin: 'http://localhost:5173' || 'http://localhost:5174' }))
+app.use(cors({ origin: ['http://localhost:5173', 'http://localhost:5174'] }))
 
 app.use(express.json())
 
@@ -25,6 +25,8 @@ app.use('/cities', cityRouter)
 app.use('/hotels', hotelRouter)
 app.use('/tours', tourRouter)
 app.use('/orders', orderRouter)
+
+app.use('/octo', octoRouter)
 
 db()
 app.listen(config.PORT, () => {

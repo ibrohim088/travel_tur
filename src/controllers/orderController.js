@@ -1,5 +1,5 @@
 import Order from '../schema/Order.js'
-// import User from '../schema/User.js'
+import { createOctoPayment } from '../db/octoAPI.js'
 
 const getAllOrders = async (req, res) => {
   try {
@@ -38,38 +38,31 @@ const getOneOrder = async (req, res) => {
 }
 
 const createOrder = async (req, res) => {
-  /*
-    const session = await mongoose.startSession()
-    session.startTransaction()
-    try {
-      const { userId, detailes } = req.body
-  
-      const user = await User.findById(userId).session(session)
-  
-      if (!user) {
-        res.status(404).json({ msg: "User not found" })
-      }
-  
-      
-  
-      const newOrder = new Order(req.body)
-      await newOrder.save({ session })
-  
-      await session.commitTransaction()
-  
-      const populateOrder = await Order.findById(newOrder._id).populate('userId', 'name email').populate({
-        path: 'hotelId',
-        populate: ''
-      })
-  
-      res.status(201).json({ msg: 'Order succsessfuly created', data: newOrder })
-    } catch (error) {
-      await session.abortTransaction();
-      res.status(500).json({ msg: error.message })
-    } finally {
-      await session.endSession();
-    }
-    */
+  try {
+    const { userId, countryId, cityId, hotelId, detailes } = req.body
+    const newOrder = await Order.create({
+      userId,
+      countryId,
+      cityId,
+      hotelId,
+      detailes,
+      status: 'pending'
+    })
+    
+    const payment = await createOctoPayment({
+      orderId: newOrder._id,
+      amount: detailes.totalPrice,
+      description: `Hotel booking`
+    })
+
+    res.status(201).json({
+      msg: 'Order yaratildi',
+      order: newOrder,
+      payment_url: payment.payment_url
+    })
+  } catch (error) {
+    res.status(500).json({ msg: error.message })
+  }
 }
 
 const updateOrder = async (req, res) => {
@@ -99,7 +92,6 @@ const deleteOrder = async (req, res) => {
     if (!deleteOrder) {
       return res.status(404).json({ msg: 'Order not found!' })
     }
-
 
     res.status(200).json({ msg: 'Order delete successfuly' })
   } catch (error) {
