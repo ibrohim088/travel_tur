@@ -1,5 +1,5 @@
-import { createOctoPayment } from '../db/octoAPI.js'
 import Payment from '../schema/Payment.js'
+import Order from '../schema/Order.js'
 
 const getPayments = async (req, res) => {
   try {
@@ -21,30 +21,9 @@ const getOnePayment = async (req, res) => {
   }
 }
 
-
-const createPayments = async (req, res) => {
-  try {
-    const { orderId, amount, description } = req.body
-
-    if (!orderId) {
-      return res.status(400).json({ msg: "orderId majburiy" })
-    }
-    if (!amount || amount <= 0) {
-      return res.status(400).json({ msg: "amount majburiy va 0 dan katta bo'lishi kerak" })
-    }
-
-    const data = await createOctoPayment({ orderId, amount, description })
-    res.status(201).json(data)
-  } catch (error) {
-    res.status(500).json({ msg: error.message })
-  }
-}
-
 const handleOctoWebhook = async (req, res) => {
   try {
     const { octo_payment_uuid, status } = req.body
-
-    // Paymentni topamiz
     const payment = await Payment.findOne({ octo_payment_uuid })
 
     if (!payment) {
@@ -52,15 +31,11 @@ const handleOctoWebhook = async (req, res) => {
     }
 
     if (status === 'succeeded') {
-      // Payment → success
       await Payment.findByIdAndUpdate(payment._id, { status: 'success' })
-      // Order → confirmed
       await Order.findByIdAndUpdate(payment.orderId, { status: 'confirmed' })
 
     } else if (status === 'failed') {
-      // Payment → failed
       await Payment.findByIdAndUpdate(payment._id, { status: 'failed' })
-      // Order → cancelled
       await Order.findByIdAndUpdate(payment.orderId, { status: 'cancelled' })
     }
 
@@ -71,4 +46,16 @@ const handleOctoWebhook = async (req, res) => {
   }
 }
 
-export { getPayments, getOnePayment, createPayments, handleOctoWebhook }
+const deletePayment = async (req, res) => {
+  try {
+    const { id } = req.params
+
+    const deletedPayment = await Payment.findByIdAndDelete(id)
+
+    res.status(200).json({ msg: "Success", data: deletedPayment })
+  } catch (error) {
+    res.status(500).json({ msg: error.message })
+  }
+}
+
+export { getPayments, getOnePayment, handleOctoWebhook, deletePayment }
