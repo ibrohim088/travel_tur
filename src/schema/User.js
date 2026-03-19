@@ -21,8 +21,7 @@ const UserSchema = new mongoose.Schema({
 
   phone: {
     type: String,
-    required: true,
-    unique: true
+    required: true
   },
 
   email: {
@@ -42,8 +41,6 @@ const UserSchema = new mongoose.Schema({
 
   permissions: {
     watchAllUsers: { type: Boolean, default: false },
-    // finance: { type: Boolean, default: false },
-    // report: { type: Boolean, default: false },
     tourPackage: { type: Boolean, default: false },
     hotels: { type: Boolean, default: false },
     bookings: { type: Boolean, default: false },

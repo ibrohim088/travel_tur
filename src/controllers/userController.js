@@ -83,14 +83,13 @@ const registerUserOrAdmin = async (req, res) => {
 
 const logInUserOrAdmin = async (req, res) => {
   try {
-    const { email, phone, password } = req.body
+    const { email, password } = req.body
 
-    if (!password || (!email && !phone)) {
+    if (!password || (!email)) {
       return res.status(400).json({ msg: 'Email/phone and password are required' })
     }
 
-    const query = email ? { email } : { phone }
-    const user = await User.findOne(query).select('+password')
+    const user = await User.findOne({ email }).select('+password')
 
     if (!user) {
       return res.status(401).json({ msg: 'Invalid credentials' })
@@ -144,6 +143,93 @@ const deleteUserOrAdmin = async (req, res) => {
   }
 }
 
+// ? PERMISSIONS - ==================================================================================
+// ? PERMISSIONS - ==================================================================================
+
+const VALID_PERMISSIONS = ['watchAllUsers', 'tourPackage', 'hotels', 'bookings']
+
+// GET /api/users/permissions
+const getAllUsersPermissions = async (req, res) => {
+  try {
+    const users = await User.find()
+    res.status(200).json({ total: users.length, users })
+  } catch (error) {
+    res.status(500).json({ msg: error.message })
+  }
+}
+
+// GET /api/users/:id/permissions
+const getUserPermissions = async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id)
+    if (!user) return res.status(404).json({ msg: 'User not found' })
+    res.status(200).json(user)
+  } catch (error) {
+    res.status(500).json({ msg: error.message })
+  }
+}
+
+// PUT /api/users/:id/permissions
+// Body: { "permissions": { "hotels": true, "bookings": false } }
+const updateUserPermissions = async (req, res) => {
+  try {
+    const { permissions } = req.body
+
+    if (!permissions || typeof permissions !== 'object') {
+      return res.status(400).json({ msg: 'permissions obyekti yuborilishi shart' })
+    }
+
+    const invalidKeys = Object.keys(permissions).filter(
+      (key) => !VALID_PERMISSIONS.includes(key)
+    )
+    if (invalidKeys.length > 0) {
+      return res.status(400).json({
+        msg: `Noto'g'ri kalit(lar): ${invalidKeys.join(', ')}`,
+        validKeys: VALID_PERMISSIONS,
+      })
+    }
+
+    const updateFields = {}
+    Object.keys(permissions).forEach((key) => {
+      updateFields[`permissions.${key}`] = permissions[key]
+    })
+
+    const user = await User.findByIdAndUpdate(
+      req.params.id,
+      { $set: updateFields },
+      { new: true }
+    )
+
+    if (!user) return res.status(404).json({ msg: 'User not found' })
+    res.status(200).json({ msg: 'Permissionlar yangilandi', user })
+  } catch (error) {
+    res.status(500).json({ msg: error.message })
+  }
+}
+
+// DELETE /api/users/:id/permissions
+const revokeAllPermissions = async (req, res) => {
+  try {
+    const user = await User.findByIdAndUpdate(
+      req.params.id,
+      {
+        $set: {
+          'permissions.watchAllUsers': false,
+          'permissions.tourPackage': false,
+          'permissions.hotels': false,
+          'permissions.bookings': false,
+        },
+      },
+      { new: true }
+    )
+
+    if (!user) return res.status(404).json({ msg: 'User not found' })
+    res.status(200).json({ msg: 'Barcha permissionlar olib tashlandi', user })
+  } catch (error) {
+    res.status(500).json({ msg: error.message })
+  }
+}
+
 export {
   getAllUsers,
   getOneUser,
@@ -151,4 +237,8 @@ export {
   logInUserOrAdmin,
   updateUserOrAdmin,
   deleteUserOrAdmin,
+  getAllUsersPermissions,
+  getUserPermissions,
+  updateUserPermissions,
+  revokeAllPermissions,
 }
