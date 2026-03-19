@@ -148,7 +148,6 @@ const deleteUserOrAdmin = async (req, res) => {
 
 const VALID_PERMISSIONS = ['watchAllUsers', 'tourPackage', 'hotels', 'bookings']
 
-// GET /api/users/permissions
 const getAllUsersPermissions = async (req, res) => {
   try {
     const users = await User.find()
@@ -158,7 +157,6 @@ const getAllUsersPermissions = async (req, res) => {
   }
 }
 
-// GET /api/users/:id/permissions
 const getUserPermissions = async (req, res) => {
   try {
     const user = await User.findById(req.params.id)
@@ -169,8 +167,6 @@ const getUserPermissions = async (req, res) => {
   }
 }
 
-// PUT /api/users/:id/permissions
-// Body: { "permissions": { "hotels": true, "bookings": false } }
 const updateUserPermissions = async (req, res) => {
   try {
     const { permissions } = req.body
@@ -179,9 +175,8 @@ const updateUserPermissions = async (req, res) => {
       return res.status(400).json({ msg: 'permissions obyekti yuborilishi shart' })
     }
 
-    const invalidKeys = Object.keys(permissions).filter(
-      (key) => !VALID_PERMISSIONS.includes(key)
-    )
+    const invalidKeys = Object.keys(permissions).filter((key) => !VALID_PERMISSIONS.includes(key))
+
     if (invalidKeys.length > 0) {
       return res.status(400).json({
         msg: `Noto'g'ri kalit(lar): ${invalidKeys.join(', ')}`,
@@ -207,7 +202,6 @@ const updateUserPermissions = async (req, res) => {
   }
 }
 
-// DELETE /api/users/:id/permissions
 const revokeAllPermissions = async (req, res) => {
   try {
     const user = await User.findByIdAndUpdate(

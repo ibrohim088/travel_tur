@@ -36,7 +36,6 @@ export const createOctoPayment = async ({ orderId, amount, description }) => {
     if (data.error === 0) {
       const responseData = data.data || data
 
-      // ✅ To'g'ri key nomlar
       await Payment.create({
         orderId,
         amount,

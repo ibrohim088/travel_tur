@@ -23,9 +23,9 @@ router.post('/login', logInUserOrAdmin)
 router.put('/:id', updateUserOrAdmin)
 router.delete('/:id', deleteUserOrAdmin)
 
-router.get('/permissons', verifyToken, checkPermission('watchAllUsers'), getAllUsersPermissions)
-router.get('/:id/permissons', verifyToken, checkPermission('watchAllUsers'), getUserPermissions)
-router.put('/:id/permissons', verifyToken, checkPermission('watchAllUsers'), updateUserPermissions)
-router.delete('/:id/permissons', verifyToken, checkPermission('watchAllUsers'), revokeAllPermissions)
+router.get('/permissions', verifyToken, checkPermission('watchAllUsers'), getAllUsersPermissions)
+router.get('/:id/permissions', verifyToken, checkPermission('watchAllUsers'), getUserPermissions)
+router.put('/:id/permissions', verifyToken, checkPermission('watchAllUsers'), updateUserPermissions)
+router.delete('/:id/permissions', verifyToken, checkPermission('watchAllUsers'), revokeAllPermissions)
 
 export default router
