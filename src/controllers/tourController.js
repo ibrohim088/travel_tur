@@ -2,10 +2,18 @@ import Tour from "../schema/Tour.js"
 
 const getAllTour = async (req, res) => {
   try {
-    const allTour = await Tour.find().populate({
+    const allTour = await Tour.find().populate([{
       path: 'tourHotel',
-      select: 'hotelId hotelName hotelRating hotelFeatures',
-    })
+      select: 'hotelName hotelRating hotelFeatures cityId',
+      populate: {
+        path: 'cityId',
+        select: 'cityName countryId',
+        populate: { path: 'countryId', select: 'countryName' }
+      }
+    },
+    { path: 'tourCity', select: '_id cityName' },
+    { path: 'tourCountry', select: '_id countryName' }
+    ])
 
     res.status(200).json(allTour)
   } catch (error) {
@@ -16,10 +24,18 @@ const getAllTour = async (req, res) => {
 const getOneTour = async (req, res) => {
   try {
     const { id } = req.params
-    const findTour = await Tour.findById(id).populate({
+    const findTour = await Tour.findById(id).populate([{
       path: 'tourHotel',
-      select: 'hotelId hotelName hotelRating hotelFeatures',
-    })
+      select: 'hotelName hotelRating hotelFeatures cityId',
+      populate: {
+        path: 'cityId',
+        select: 'cityName countryId',
+        populate: { path: 'countryId', select: 'countryName' }
+      }
+    },
+    { path: 'tourCity', select: '_id cityName' },
+    { path: 'tourCountry', select: '_id countryName' }
+    ])
 
     if (!findTour) return res.status(404).json({ msg: "Tour not found" })
 

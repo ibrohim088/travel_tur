@@ -24,6 +24,18 @@ const TourSchema = new mongoose.Schema({
     required: true
   },
 
+  tourCity: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'City',
+    required: true,
+  },
+
+  tourCountry: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Country',
+    required: true,
+  },
+
   tourPrice: {
     type: Number,
     required: true,

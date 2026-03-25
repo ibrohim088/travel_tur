@@ -7,6 +7,8 @@ const router = express.Router()
 
 router.get('/', getAllTour)
 router.get('/:id', getOneTour)
+// router.post('/create_tour', createTour)
+// router.delete('/:id', deleteTour)
 
 router.post('/create_tour', verifyToken, checkPermission('tourPackage'), createTour)
 router.put('/:id', verifyToken, checkPermission('tourPackage'), updateTour)
