@@ -53,6 +53,11 @@ const TourSchema = new mongoose.Schema({
     required: true,
     default: 'BB'
   },
+
+  tourImg: {
+    type: Array,
+    required: true, 
+  }
 }, {
   versionKey: false
 })

@@ -1,5 +1,7 @@
 import express from 'express'
 import cors from 'cors'
+import path from 'path'
+import { fileURLToPath } from 'url'
 
 import config from './src/shared/config.js'
 import db from './src/db/index.js'
@@ -11,6 +13,9 @@ import hotelRouter from './src/routes/hotel.js'
 import tourRouter from './src/routes/tour.js'
 import orderRouter from './src/routes/order.js'
 import octoRouter from './src/routes/octo.js'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 const app = express()
 
@@ -25,6 +30,8 @@ app.use('/hotels', hotelRouter)
 app.use('/tours', tourRouter)
 app.use('/orders', orderRouter)
 app.use('/octo', octoRouter)
+
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 
 db()
 app.listen(config.PORT, () => {
