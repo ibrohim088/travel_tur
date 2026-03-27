@@ -1,10 +1,11 @@
 import axios from "axios";
 import https from 'https'
 import Payment from "../schema/Payment.js";
+import config from '../shared/config.js'
 
-const OCTO_API_URL = 'https://secure.octo.uz/prepare_payment';
-const MERCHANT_ID = "42422";
-const SECRET_KEY = "16a1ab48-a2bb-4c52-928b-d24411b41382";
+const OCTO_API_URL = config.OCTO_URL;
+const MERCHANT_ID = config.OCTO_MERCHANT;
+const SECRET_KEY = config.OCTO_SECRET;
 
 const httpsAgent = new https.Agent({ rejectUnauthorized: false })
 
