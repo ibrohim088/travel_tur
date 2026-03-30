@@ -4,7 +4,12 @@ import dns from 'node:dns'
 
 dns.setServers(['1.1.1.1', '8.8.8.8'])
 async function db() {
-  return await mongoose.connect(`${config.DB_URL}`)
+  return await mongoose.connect(config.DB_URL, {
+    ssl: true,
+    tls: true,
+    serverSelectionTimeoutMS: 10000,
+    socketTimeoutMS: 45000,
+  })
     .then(() => {
       console.log('DB is connect!')
     })
