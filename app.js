@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url'
 
 import config from './src/shared/config.js'
 import db from './src/db/index.js'
+import { getIPv4 } from './src/utilities/network.js'
 
 import userRouter from './src/routes/user.js'
 import countryRouter from './src/routes/country.js'
@@ -16,6 +17,7 @@ import octoRouter from './src/routes/octo.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
+const IP = getIPv4()
 
 const app = express()
 
@@ -35,5 +37,6 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 
 db()
 app.listen(config.PORT, () => {
-  console.log(`Server is listining on port ${config.PORT}`);
+  console.log(`\nServer is listining on port ${config.PORT}`);
+  console.log(`Network: http://${IP}:${config.PORT}`);
 })
